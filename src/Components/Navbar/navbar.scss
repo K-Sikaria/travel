@@ -1,0 +1,42 @@
+/* Colours and styling */
+:root{
+    --white: "#fff";
+    --darkslateblue: "#0d4587";
+    --steelblue: "#265790";
+    --black: "#000";
+    --gradientColour: linear-gradient(to right, hsl(187,85%, 43%), hsl(199, 100%, 33%));
+    --transparent: rgba(0,0,0,0.3);
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+
+    .logo{
+        color: var(--black);
+    }
+
+    @media screen and (max-width: 768px) {
+        .navBar{
+            position: absolute;
+            background: var(--transparent);
+            height: max-content;
+            width: 80%;
+            border-radius: 1rem;
+            top: 6 rem;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 2000;
+            box-shadow: 0 2px 4px rgba(2,15,29,0.904);
+            transition: .3s ease-in-out;
+        
+
+        }
+    }
+}
