@@ -17,6 +17,11 @@
     --black: "#000";
     --gradientColour: linear-gradient(to right, hsl(187,85%, 43%), hsl(199, 100%, 33%));
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
 }
