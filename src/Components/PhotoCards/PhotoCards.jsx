@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import './carousel.css'
+import './photoCards.css'
 
 import img from '../../Assets/img1.jpg'
 import img2 from '../../Assets/img2.jpg'
@@ -10,7 +10,6 @@ import {HiOutlineClipboardCheck} from 'react-icons/hi'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { init } from 'aos'
 
 const Data = [
   {
@@ -44,14 +43,14 @@ const Data = [
   },
 ]
 
-const Carousel = () => {
+const PhotoCards = () => {
 
   useEffect(()=>{
     Aos.init({duration: 2000})
   }, [])
 
   return (
-    <section className='carousel container section'>
+    <section className='photocards container section'>
       <div className='secTitle'>
         <h3 data-aos="fade-right"
          className='title'>
@@ -102,4 +101,4 @@ const Carousel = () => {
   )
 }
 
-export default Carousel
+export default PhotoCards

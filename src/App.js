@@ -1,18 +1,32 @@
 import React from 'react'
 import './app.css'
-import Navbar from './Components/Navbar/Navbar'
-import Home from './Components/Home/Home'
-import Carousel from './Components/Carousel/Carousel'
-import Footer from './Components/Footer/Footer'
+import Main from './Components/Main'
+import Login from './Components/Login'
+import Register from './Components/Register'
+
+import{
+  createBrowserRouter,
+  RouterProvider
+}from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <div><Login/></div>
+  },
+  {
+    path: '/register',
+    element: <div><Register/></div>
+  },
+  {
+    path: '/main',
+    element: <div><Main /></div>
+  }
+])
 
 const App = () => {
   return (
-    <>
-    <Navbar/>
-    <Home/>
-    <Carousel/>
-  {/*<Footer/> */}
-    </>
+    <RouterProvider router={router}/>
   )
 }
 
